@@ -996,6 +996,9 @@ static const struct gpio_setting
 void MHal_GPIO_Init(void)
 {
     MHal_CHIPTOP_REG(REG_ALL_PAD_IN) &= ~BIT7;
+    //MHal_GPIO_Pad_Odn(108);
+    MHal_GPIO_Set_Output(108);
+    MHal_GPIO_Set_Low(108);
 }
 
 void MHal_GPIO_Pad_Set(MS_GPIO_NUM u8IndexGPIO)
